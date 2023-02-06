@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Level/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/Lever.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level/DoorLever.cs" type="Script" id=3]
+
+[node name="DoorLever" type="Node2D"]
+
+[node name="Door" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 3 )
+
+[node name="Lever" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="Lever" to="Door" method="OnLeverBodyEntered"]
+[connection signal="body_exited" from="Lever" to="Door" method="OnLeverBodyExited"]

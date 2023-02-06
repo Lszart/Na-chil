@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Gbox.png" type="Texture" id=1]
+[ext_resource path="res://Level/RigidBodyBox.cs" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[node name="Box" type="RigidBody2D" groups=["bodies"]]
+position = Vector2( 80, 216 )
+z_index = 2
+collision_mask = 17
+mode = 2
+mass = 2.0
+physics_material_override = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Gbox" type="Sprite" parent="."]
+texture = ExtResource( 1 )

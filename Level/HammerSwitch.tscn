@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Gplate.png" type="Texture" id=1]
+[ext_resource path="res://Level/Hammer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level/HammerSwitch.cs" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 4 )
+
+[node name="HammerSwitch" type="Node2D"]
+
+[node name="Hammer" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Switch" type="Area2D" parent="."]
+position = Vector2( 0, 32 )
+z_index = 1
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch"]
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="Gplate" type="Sprite" parent="Switch"]
+texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="Switch" to="Hammer" method="OnSwitchBodyEntered"]
+[connection signal="body_exited" from="Switch" to="Hammer" method="OnSwitchBodyExited"]

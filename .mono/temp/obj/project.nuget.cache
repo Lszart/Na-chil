@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6LE/2qqlROeBXGwCexuorNwg35oVHimaZJuRrLFTpbUAvKh5b3iJN5EoTzDV4t/aIFyp/7b7Aj9JIFo2cWuuJQ==",
+  "success": true,
+  "projectFilePath": "F:\\GitHub\\GGJ2023\\Ggj 2023.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\axtro\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\axtro\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
